@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Theme Park</title>
+    <link rel="stylesheet" href="stylesheets/Park.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo2.jpg" alt="Park Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tickets-passes.html">Tickets & Passes</a></li>
+                <li><a href="park-hours-map.html">Park Hours & Map</a></li>
+                <li><a href="rides-experiences.html">Rides & Experiences</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ticket purchase confirmation  Banner -->
+    <div class="message">
+       <h1>Thank you for your purchase!</h1>
+        
+    <p>Please show the ticket details below at the park entry gate to enter the amazing world of our Theme Park! </p>
+    </div>
+
+    <section class="message-for-confirmation">
+      
+      <div class="info">
+        <p><span class="label">Ticket Type:</span> <span id="ticket-type">Loading...</span></p>
+        <p><span class="label">Number of Tickets:</span> <span id="quantity">Loading...</span></p>
+        <p><span class="label">Name:</span> <span id="name">Loading...</span></p>
+        <p><span class="label">Email:</span> <span id="email">Loading...</span></p>
+        <p><span class="label">Phone Number:</span> <span id="phone">Loading...</span></p>
+      </div>
+      <a href="ticket-purchase.html" class="btn">Return to Purchase Page</a>
+    </section>
+ 
+<!--JavaScript for the purchase infromation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+
+      document.getElementById("ticket-type").textContent = urlParams.get("ticket-type");
+      document.getElementById("quantity").textContent = urlParams.get("quantity");
+      document.getElementById("name").textContent = urlParams.get("name");
+      document.getElementById("email").textContent = urlParams.get("email");
+      document.getElementById("phone").textContent = urlParams.get("phone");
+    });
+  </script>
+</body>
+</html>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Theme Park. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

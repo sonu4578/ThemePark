@@ -12,29 +12,31 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="images/Amusement-Park-Logo.png" alt="Park Logo">
+                <img src="images/logo2.jpg" alt="Park Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="tickets&passes.html">Tickets & Passes</a></li>
-                <li><a href="park-hours&map.html">Park Hours & Map</a></li>
-                <li><a href="rides&experiences.html">Rides & Experiences</a></li>
+                <li><a href="tickets-passes.html">Tickets & Passes</a></li>
+                <li><a href="park-hours-map.html">Park Hours & Map</a></li>
+                <li><a href="rides-experiences.html">Rides & Experiences</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
+    <!--Form for ticket purchase-->
+
     <section class="ticket-purchase">
         <h1>Buy Your Tickets</h1>
-        <form id="ticket-form">
-            <div class="ticket-options">
+        <form id="ticket-form" method="GET" action="ticket-purchase-confirmation.html">
+            <div class="ticket-type">
                 <label for="ticket-type">Select Ticket Type:</label>
                 <select id="ticket-type" name="ticket-type" required>
-                    <option value="Group of 11-13 Guests">Day Pass</option>
-                    <option value="Corporate Package">Annual Pass</option>
-                    <option value="Daily Tickets">VIP Pass</option>
-                    <option value="Gold Pass">Annual Pass</option>
-                    <option value="Silver Pass">VIP Pass</option>
+                    <option value="Daily Tickets">Daily Tickets</option>
+                    <option value="Group of 11-13 Guests">Group of 11-13 Guests</option>
+                    <option value="Corporate Package">Corporate Package</option>
+                    <option value="Gold Pass">Gold Pass</option>
+                    <option value="Silver Pass">Silver Pass</option>
                 </select>
             </div>
 
@@ -43,31 +45,37 @@
                 <input type="number" id="quantity" name="quantity" min="1" value="1" required>
             </div>
 
-            <div class="ticket-summary">
-                <h2>Ticket Summary</h2>
-                <p>Total Cost: <span id="total-cost">$50.00</span></p>
-            </div>
-
             <div class="customer-details">
                 <h3>Enter Your Details</h3>
-                <label for="name">Full Name:</label>
+                <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="email">Email Address:</label>
+                <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="phone">Phone Number:</label>
+                <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone" required>
 
-                <label for="payment-method">Payment Method:</label>
+                <label for="payment-method">Card Type</label>
                 <select id="payment-method" name="payment-method" required>
-                    <option value="credit-card">Credit Card</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="google-pay">Google Pay</option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="american-express">American Express</option>
                 </select>
+
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="card-expiration-date">Card Expiration Date</label>
+                <input type="text" id="card-expiration-date" name="card-expiration-date" required>
+
+                <label for="card-cvv">CVV</label>
+                <input type="text" id="card-cvv" name="card-cvv" required>
+
+                <button type="submit" class="learn-more">Complete Purchase</button>
+
             </div>
 
-            <button type="submit" id="submit-button">Complete Purchase</button>
         </form>
     </section>
 
@@ -75,6 +83,6 @@
         <p>&copy; 2024 Adventure Park. All rights reserved.</p>
     </footer>
 
-    <script src="scripts/ticketTotalPrice.js"></script>
+    
 </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Theme Park hours and map</title>
+    <link rel="stylesheet" href="stylesheets/Park.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo2.jpg" alt="Park Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tickets-passes.html">Tickets & Passes</a></li>
+                <li><a href="park-hours-map.html">Park Hours & Map</a></li>
+                <li><a href="rides-experiences.html">Rides & Experiences</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Park hours and map banner-->
+
+    <section class="message">
+        <h1>Park Hours & Map</h1>
+        <p>Plan your visit! Check out our park hours and the map below.</p>
+    </section>
+
+    <!-- Park Hours and Map Layout -->
+    <section class="main-content">
+        <div class="calendar-container">
+            <header class="calendar-header">
+                <button id="prev-month" class="nav-button">&lt;</button>
+                <h2 id="month-name">November 2024</h2>
+                <button id="next-month" class="nav-button">&gt;</button>
+            </header>
+            <div id="calendar-grid" class="calendar-grid">
+                <!-- The calendar days will be inserted here by JS -->
+            </div>
+        </div>
+
+        <div class="map-container">
+            <h2 id="month-name">Park Map</h2>
+            <!-- Image Source:https://stock.adobe.com/133190222-->
+            <img src="images/ParkMap.jpg" alt="Park Map" class="map" id="park-map">
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Park Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Calendar -->
+    <script src="scripts/calendar.js"></script>
+</body>
+
+</html>

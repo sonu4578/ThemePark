@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rides and Experiences</title>
+    <link rel="stylesheet" href="stylesheets/Park.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    
+     <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo2.jpg" alt="Park Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tickets-passes.html">Tickets & Passes</a></li>
+                <li><a href="park-hours-map.html">Park Hours & Map</a></li>
+                <li><a href="rides-experiences.html">Rides & Experiences</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Video of the ride -->
+    <section class="hero">
+        <video  id="myVideo"  autoplay loop controls style="width: 100%; max-height: 500px;">
+            <source src="media/RollerCoaster2ForRidesPage.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <!-- Content over the video with interaction enabled -->
+        <div class="hero-content">
+            <h1>Rides & Experiences</h1>
+            <p>Experience thrills, excitement, and fun at every corner of our park!</p>
+        </div>
+    </section>
+
+    <!-- Rides, Dining, and Shops Section -->
+    <section class="sections">
+        <div class="section-box">
+             <!-- Image Source:https://stock.adobe.com/894549392-->
+            <img src="images/Rides.jpg" alt="Ride" class="section-image">
+            <h2>Rides</h2>
+            <p>Thrilling rides for adrenaline junkies! Enjoy our roller coasters, water rides, and other thrilling adventures.</p>
+            <a href="rides.html" class="learn-more">Learn More</a>
+        </div>
+        <div class="section-box">
+            <!-- Image Source: https://stock.adobe.com/1101763124-->
+            <img src="images/DiningTable.jpg" alt="Dining" class="section-image">
+            <h2>Dining</h2>
+            <p>Delicious dining options throughout the park! From quick bites to sit-down meals, there's something for every taste.</p>
+            <a href="dining.html" class="learn-more">Learn More</a>
+        </div>
+        <div class="section-box">
+            <!-- Image Source: https://themeparkguide.co.uk/shops -->
+            <img src="images/gift-shop-1.jpeg" alt="Shops" class="section-image">
+            <h2>Shops</h2>
+            <p>Shop for souvenirs to remember your visit. Explore a variety of stores with unique merchandise.</p>
+            <a href="shop.html" class="learn-more">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Theme Park. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            const video = document.getElementById('myVideo');
+            video.volume = 0.2; // Set initial low volume
+        };
+    </script>
+
+</body>
+</html>

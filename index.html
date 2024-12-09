@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,19 @@
     <title>Theme Park</title>
     <link rel="stylesheet" href="stylesheets/Park.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <header>
         <nav>
             <div class="logo">
-                <img src="images/Amusement-Park-Logo.png" alt="Park Logo">
+                <img src="images/logo2.jpg" alt="Park Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="tickets&passes.html">Tickets & Passes</a></li>
-                <li><a href="park-hours&map.html">Park Hours & Map</a></li>
-                <li><a href="rides&experiences.html">Rides & Experiences</a></li>
+                <li><a href="tickets-passes.html">Tickets & Passes</a></li>
+                <li><a href="park-hours-map.html">Park Hours & Map</a></li>
+                <li><a href="rides-experiences.html">Rides & Experiences</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
         </nav>
@@ -26,36 +28,40 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <video class="home-page-hero-video" autoplay muted loop>
-            <!-- Image Source:https://stock.adobe.com/70098545 -->
-            <source src="media/AdobeStock_70098545_Video_HD_Preview.mov" type="video/mp4">
+        <video  id="myVideo"  autoplay loop controls style="width: 100%; max-height: 500px;">
+            <source src="media/Theme_Park_Pexels_11027170-sd_960_540_30fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+    
+        <!-- Content over the video with welcome message -->
         <div class="hero-content">
-            <h1>Welcome to Our Amazing Theme Park</h1>
-            <p>Unforgettable rides, exciting shows, and family fun await!</p>
-            <a href="tickets&passes.html" class="btn">Buy Your Tickets Now</a>
+            <h1>Welcome to the Theme Park</h1>
+            <p>Experience amazing rides and entertainment options!</p>
+            <a href="tickets-passes.html" class="btn">Buy Your Tickets Now</a>
         </div>
     </section>
 
     <!-- Featured Sections -->
     <section class="features">
         <div class="feature-box">
+             <!-- Image Source: https://stock.adobe.com/497029584 -->
             <img src="images/RollarCoaster.jpeg" alt="Exciting Rides">
             <h2>Exciting Rides</h2>
             <p>Thrilling roller coasters and more!</p>
             <a href="rides.html" class="btn">Learn More</a>
         </div>
         <div class="feature-box">
+            <!-- Image Source: https://stock.adobe.com/765425398 -->
             <img src="images/LiveShowForHomePage.jpeg" alt="Live Shows">
             <h2>Live Shows</h2>
             <p>Catch the best performances daily.</p>
             <a href="live-shows.html" class="btn">Learn More</a>
         </div>
         <div class="feature-box">
+            <!-- Image Source: https://stock.adobe.com/1102134163 -->
             <img src="images/UpcomingEventsHomePage.jpeg" alt="Upcoming Events">
             <h2>Upcoming Events</h2>
-            <p>Special events and seasonal celebrations.</p>
+            <p>Special events & celebrations.</p>
             <a href="upcoming-events.html" class="btn">Learn More</a>
         </div>
     </section>
@@ -64,5 +70,12 @@
     <footer>
         <p>&copy; 2024 Theme Park | All Rights Reserved</p>
     </footer>
+    <script>
+        window.onload = function () {
+            const video = document.getElementById('myVideo');
+            video.volume = 0.2; // Set initial low volume
+        };
+    </script>
 </body>
+
 </html>

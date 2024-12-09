@@ -9,30 +9,32 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color:#c2e2f5;
+    background-color: #c2e2f5;
 
 }
 
 
 /* Navigation */
 header {
-    background-color: white;
+
     padding: 10px 0;
+    background-color: #60c1eb;
 }
 
-
+/*  navbar  */
 nav {
-    display: flex; /* Make navbar a flex container */
-    /*justify-content: space-between; /* Ensure space between logo and links */
-    align-items: center; /* Vertically center the logo and links */
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
 }
 
 /* Logo Style */
 .logo img {
-    max-width: 120px;  /* Control max width of the logo */
-    height: auto;      /* Maintain aspect ratio */
-    display: block;    /* Make sure the image behaves properly */
+    max-width: 50px;
+    height: auto;
+    display: block;
 }
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -55,38 +57,39 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-/* Hero Section */
+/******* 
+Style for home page 
+********/
+
 
 .hero {
     position: relative;
-    height: 40vh; /* Full viewport height */
+    height: 45vh;
     width: 100%;
-    overflow: hidden; /* Prevent overflow if video is larger */
-    color: white;
-    text-align: center;
 }
 
-.home-page-hero-video {
+.hero-content {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure video covers the hero section */
-    z-index: -1; /* Place the video behind the content */
-}
-/*.hero {
-    background-image: url('park-background.jpg');
-    background-size: cover;
-    background-position: center;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     color: white;
     text-align: center;
-    padding: 100px 0;
-}*/
+    z-index: 10;
+    width: 100%;
+}
+
+/* Style for videos of the webside */
+#myVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .hero h1 {
     font-size: 3em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: black;
 
 }
@@ -98,7 +101,8 @@ nav ul li a:hover {
 }
 
 .hero .btn {
-    background-color: #ff4500;
+
+    background-color: #000080;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -131,7 +135,7 @@ nav ul li a:hover {
     border-radius: 8px;
     max-height: 200px;
     object-fit: cover;
-    z-index: -1; 
+    z-index: -1;
 }
 
 .feature-box h2 {
@@ -144,7 +148,7 @@ nav ul li a:hover {
 }
 
 .feature-box .btn {
-    background-color: #333;
+    background-color: #000080;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -157,37 +161,18 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
+
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+
 }
 
-/*****
-Style for ticket&passes Page
+/********* 
+Style For Tickets and Passes Page 
 ******/
-
-/* Tickets Section Banner */
-.ticket-banner {
-    background-image: url('park-background.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 10px 0;
-    color: white;
-    text-align: center;
-}
-
-.ticket-banner h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: black;
-}
-
-.ticket-banner p {
-    font-size: 20px;
-    color: black;
-}
 
 /* Ticket Options Section */
 .ticket-options {
@@ -197,75 +182,62 @@ Style for ticket&passes Page
     margin: 50px 20px;
 }
 
-.ticket-box1{
-    background:#68a4f1;
+.ticket-options h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+.ticket-box1 {
+    background: #74bee9;
     border-radius: 8px;
     padding: 20px;
     width: 35%;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
+
 }
-.ticket-box2{
-    background: #43b0f1;
+
+.ticket-box2 {
+    background: #74bee9;
     border-radius: 8px;
     padding: 20px;
     width: 20%;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+
 }
-/*.ticket-box1{
-    background: #f4f4f4;
-    border-radius: 8px;
-    padding: 20px;
-    width: 35%;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}*/
+
 .ticket-details h3 {
     font-size: 24px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
-.ticket-details p {
-    font-size: 16px;
+.ticket-details h4 {
+    font-size: 14px;
     margin-bottom: 15px;
+    text-align: left;
 }
 
-.ticket-details ul {
-    list-style-type: dot;
-    margin-bottom: 15px;
-    padding-bottom: 30px;
-}
 
 .ticket-details ul li {
+
     margin-left: 0;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-.ticket-details button {
-    background-color: #ff9800;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-   
-    
-}
 
-.ticket-details button:hover {
-    background-color: black;
-}
+
 
 /* Group Ticket Box */
 .ticket-details {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -277,15 +249,6 @@ Style for ticket&passes Page
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.group-box h4 {
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-
-.group-box ul {
-    font-size: 12px;
-    margin-bottom: 10px;
-}
 
 /* Season Passes */
 .pass-options {
@@ -295,109 +258,169 @@ Style for ticket&passes Page
 }
 
 .pass-box1 {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
     width: 45%;
-    background: #D4AF37 ;
+    background: #a9d9f3;
     border-radius: 8px;
     padding: 20px;
+    padding-left: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.pass-box1 a {
+    display: block; /* Makes the link a block element so it can be centered */
+    text-align: center; /* Centers the text inside the <a> */
+    margin: 0 auto; /* Centers the <a> itself */
+    padding: 10px 10px; /* Optional: add some padding to make the link stand out */
+}
+.pass-box2 a {
+    display: block; /* Makes the link a block element so it can be centered */
+    text-align: center; /* Centers the text inside the <a> */
+    margin: 0 auto; /* Centers the <a> itself */
+    padding: 10px 10px; /* Optional: add some padding to make the link stand out */
 }
 
 .pass-box2 {
-    text-align: center;
-    width: 45%;
-    background: #C0C0C0;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
-}
-
-.pass-box img {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
     width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+    background: #a9d9f3;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
 
-.pass-box h4 {
-    font-size: 20px;
+
+
+.pass-box1 .passbox2 h4 {
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
-.pass-box ul {
-    list-style: none;
+.pass-box1,
+.passbox2 ul {
+    /*list-style: none; */
     font-size: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
 }
 
-.pass-box ul li {
+.pass-box1,
+.passbox2 ul li {
+    margin-left: 0;
+    font-size: 14px;
     margin-bottom: 10px;
+
+    margin-bottom: 20px;
 }
 
 /*****
 Style for park-hours&map page
 ******/
 
-
-/* Banner Section */
-.banner {
-    background: url('park-banner.jpg') no-repeat center center/cover;
-    text-align: center;
-    padding: 50px 0;
-    color: white;
-}
-
-.banner h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.banner p {
-    font-size: 1.2rem;
-}
-
-/* Main Content Section */
 .main-content {
     display: flex;
     justify-content: space-between;
     padding: 40px;
-    flex-wrap: wrap;
+    height: 100vh;
+
 }
 
-.calendar {
+.calendar-container {
     flex: 3;
     max-width: 65%;
     padding-right: 20px;
+    overflow: auto;
+
 }
 
-.calendar h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+
+
+/* Header for the calendar */
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
 }
 
+/* Style for the month name */
+#month-name {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style for the navigation buttons (previous and next) */
+.nav-button {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-button:hover {
+    color: #ff9800;
+}
+
+/* Calendar grid with 7 columns for the days of the week*/
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
-}
-
-.day {
-    text-align: center;
     padding: 10px;
-    background-color: #f0f0f0;
+    justify-items: center;
+}
+
+/* Style for each day cell */
+.day {
+    background-color: #fff;
+    padding: 5px;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-.day img {
-    width: 30px;
-    margin-bottom: 10px;
+/* Style for the date number */
+.date {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.day p {
-    font-size: 0.9rem;
-    color: #333;
+/* Style for the time and clock icon container */
+.time-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
 }
+
+/* Style for the clock icon */
+.clock-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the operating hours text */
+.hours-text {
+    margin: 0;
+}
+
 
 .map-container {
     flex: 1;
@@ -430,46 +453,68 @@ Style for park-hours&map page
 /******
 Style for Rides and Experiences page
 ****/
+
 .banner {
     position: relative;
-    height: 50vh; /* Full viewport height */
+    height: 50vh;
     width: 100%;
-    overflow: hidden; /* Prevent overflow if video is larger */
+    overflow: hidden;
     color: white;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
 }
 
 .banner h1 {
     font-size: 3rem;
     margin-bottom: 10px;
-    color: black;
+    color: white;
+    text-align: center;
 }
 
 .banner p {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
-    color: black;
-
+    text-align: center;
+    color: white;
 }
+
+/* Ensure video scales properly on all devices */
 .video-container {
     position: relative;
     text-align: center;
     margin-top: 20px;
-    max-width: 100%;  /* Ensure video scales properly on all devices */
+    max-width: 100%;
     border-radius: 10px;
     overflow: hidden;
 }
 
+.controls {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ensure video covers the hero section */
 .rollercoaster-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure video covers the hero section */
-    z-index: -1; /* Place the video behind the content */
+    object-fit: cover;
+    z-index: -1;
 }
+
 /* Rides, Dining, and Shops Section */
 .sections {
     display: flex;
@@ -484,7 +529,7 @@ Style for Rides and Experiences page
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
 }
 
@@ -514,14 +559,16 @@ Style for Rides and Experiences page
 }
 
 .learn-more {
-    padding: 12px 20px;
-    background-color: #333;
+    padding: 10px 15px;
+    background-color: #000080;
     color: white;
     border: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
+    margin-top: 10px;
+
 }
 
 .learn-more:hover {
@@ -529,32 +576,23 @@ Style for Rides and Experiences page
 }
 
 
-
-
 /******
 Style for Contact us page
 ****/
 
-/*.banner {
-    background: url('../images/ContactPage.png') no-repeat center center;
-    background-size: cover;  
-    background-position: center center;  
-    text-align: center;
-    padding: 80px 20px;
-    color: white;
 
-
-}*/
 .message img {
-    width: 500px;         /* Set the width of the image */
-    margin: 10px auto;    /* Auto margins on the left and right to center the image */
-    padding: 10px;        /* Padding around the image */
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
     display: block;
     max-width: 100%;
-        
+
 }
+
 .message h1 {
-    font-size: 3rem;
+    font-size: 2.0rem;
+    margin-top: 25px;
     margin-bottom: 5px;
     text-align: center;
 }
@@ -564,6 +602,19 @@ Style for Contact us page
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+}
+
+.message-for-confirmation {
+
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: 35px;
+
 }
 
 /* Contact Form Section */
@@ -601,7 +652,8 @@ label {
     margin-bottom: 5px;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -614,14 +666,18 @@ textarea {
 
 button {
     padding: 12px 20px;
-    background-color: #333;
+    background-color: #000080;
     color: white;
     border: none;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
     margin-top: 20px;
-    width: 100%;
+    width: 35%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button:hover {
@@ -632,10 +688,11 @@ button:hover {
 /******
 Style for Rides Page
 *****/
-.rides-heading{
+.rides-heading {
 
     text-align: center;
 }
+
 .rides-container {
     display: flex;
     flex-wrap: wrap;
@@ -644,9 +701,9 @@ Style for Rides Page
 }
 
 .ride-box {
-    display: flex;             /* Use flexbox for horizontal alignment of image and info */
-    align-items: center;       /* Vertically align the content */
-    width: 48%;                /* Adjust width of each box (to fit two boxes per row) */
+    display: flex;
+    align-items: center;
+    width: 48%;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -655,19 +712,19 @@ Style for Rides Page
 }
 
 .ride-box:hover {
-    transform: scale(1.05);    /* Add a slight zoom effect on hover */
+    transform: scale(1.05);
 }
 
 .ride-img {
-    width: 200px;              /* Fixed width for the image */
-    height: 200px;             /* Fixed height for the image */
-    object-fit: cover;         /* Ensures the image covers the space without distortion */
-    border-radius: 5px;        /* Optional: add rounded corners to the image */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .ride-info {
     padding: 15px;
-    flex: 1;                    /* Ensure the info section takes up the remaining space */
+    flex: 1;
 }
 
 .ride-info h3 {
@@ -689,18 +746,21 @@ Style for Rides Page
 /*******
  Style for Dining and Shop Layout 
  ******/
-.dining-container, .shop-container {
+
+.dining-container,
+.shop-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
 }
 
-/* Dining Box */
-.dining-box, .shop-box {
-    display: flex;              /* Use flexbox for horizontal layout */
-    align-items: center;        /* Vertically align image and text */
-    width: 48%;                 /* Adjust box width for 2 items per row */
+/* Dining Box and Shop Box for 2 items per row */
+.dining-box,
+.shop-box {
+    display: flex;
+    align-items: center;
+    width: 48%;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -708,42 +768,50 @@ Style for Rides Page
     transition: transform 0.3s ease;
 }
 
-.dining-box:hover, .shop-box:hover {
-    transform: scale(1.05);     /* Hover effect */
+.dining-box:hover,
+.shop-box:hover {
+    transform: scale(1.05);
 }
 
 /* Image Styling for Dining and Shop Items */
-.dining-img, .shop-img {
-    width: 200px;               /* Fixed width */
-    height: 200px;              /* Fixed height */
-    object-fit: cover;          /* Make sure image covers the container */
-    border-radius: 5px;         /* Rounded corners */
+.dining-img,
+.shop-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 /* Information Styling */
-.dining-info, .shop-info {
+.dining-info,
+.shop-info {
     padding: 15px;
-    flex: 1;                     /* Info section takes up the remaining space */
+    flex: 1;
 }
 
-.dining-info h3, .shop-info h3 {
+.dining-info h3,
+.shop-info h3 {
     font-size: 20px;
     color: #333;
     margin-bottom: 10px;
 }
 
-.dining-info p, .shop-info p {
+.dining-info p,
+.shop-info p {
     font-size: 14px;
     color: #555;
     margin: 5px 0;
 }
 
-.dining-info strong, .shop-info strong {
+.dining-info strong,
+.shop-info strong {
     color: #333;
 }
+
 /******
 Style for ticket-purchase page
 *****/
+
 .ticket-purchase {
     max-width: 800px;
     margin: 50px auto;
@@ -759,10 +827,20 @@ Style for ticket-purchase page
 }
 
 .ticket-options,
-.quantity,
 .ticket-summary,
 .customer-details {
     margin-bottom: 20px;
+}
+
+.quantity,
+.ticket-type,
+.customer-details {
+    width: 45%;
+}
+
+.customer-details textarea {
+    width: 30ch;
+    box-sizing: border-box;
 }
 
 label {
@@ -771,7 +849,8 @@ label {
     margin-bottom: 8px;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -782,51 +861,71 @@ input, select {
 /*******
 Style for detailed Map page
 *******/
+
 /* Map Section */
 .map-section {
     text-align: center;
     padding: 10px;
-    
-  }
-  
-  .park-map {
+
+}
+
+.park-map {
     max-width: 100%;
     height: auto;
     margin: 10px 0;
     border: 2px solid #ddd;
     border-radius: 10px;
-  }
-  
-  /* Legends Section */
-  .legends-section {
+}
+
+/* Legends Section */
+.legends-section {
     padding: 20px;
-  }
-  
-  .legends-container {
+}
+
+.legends-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     margin-top: 20px;
-  }
-  
-  .legend-item {
+}
+
+.legend-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-  
-  .legend-item img {
+}
+
+.legend-item img {
     width: 50px;
     height: 50px;
-  }
-  
-  .legend-item p {
+}
+
+.legend-item p {
     margin-top: 10px;
     font-weight: bold;
-  }
-  
+}
 
+/******
+style for tickets-purchase-confirmation
+****/
+
+
+.info {
+    margin: 10px 0;
+    padding: 10px;
+    background: #aecdde;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
 
 
 /* Media Queries for Responsiveness */
@@ -856,21 +955,33 @@ Style for detailed Map page
         font-size: 16px;
     }
 
-/*****
-Style for ticket&passes Page
-******/
+    /*****
+    Style for ticket&passes Page
+    ******/
 
     .ticket-options {
         flex-direction: column;
         align-items: center;
     }
 
-    .ticket-box {
-        width: 80%;
+    .ticket-box2 {
+
+        max-width: 100%;
+        width: 45%;
     }
+
+    .ticket-box1 {
+
+        max-width: 100%;
+        width: 45%;
+    }
+
+
+
 
     .ticket-details {
         flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .group-box {
@@ -882,130 +993,151 @@ Style for ticket&passes Page
         flex-direction: column;
     }
 
-    .pass-box {
+    .pass-box1 {
         width: 100%;
         margin-bottom: 20px;
     }
 
+    .pass-box2 {
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+
     /*****
-Style for park-hours&map page
-******/
+    Style for park-hours&map page
+    ******/
 
-.main-content {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
 
-.calendar {
-    max-width: 100%;
-    margin-bottom: 20px;
-}
+    .calendar {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 
-.map-container {
-    max-width: 100%;
-}
+    .map-container {
+        max-width: 100%;
+    }
 
-.calendar-grid {
-    grid-template-columns: repeat(4, 1fr);
-}
-/****
-Style for Rides and Experiences page
-****/
-.sections {
-    flex-direction: column;
-    align-items: center;
-}
+    .calendar-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-.section-box {
-    width: 80%;
-}
+    /****
+    Style for Rides and Experiences page
+    ****/
+    .sections {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.banner h1 {
-    font-size: 2.5rem;
-}
+    .section-box {
+        width: 80%;
+    }
 
-.banner p {
-    font-size: 1rem;
-}
-/****
-Style for Rides and Experiences page
-****/
-.sections {
-    flex-direction: column;
-    align-items: center;
-}
+    .banner h1 {
+        font-size: 2.5rem;
+    }
 
-.section-box {
-    width: 80%;
-}
+    .banner p {
+        font-size: 1rem;
+    }
 
-.banner h1 {
-    font-size: 2.5rem;
-}
+    /****
+    Style for Rides and Experiences page
+    ****/
+    .sections {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.banner p {
-    font-size: 1rem;
-}
-/****
-Style for Rides and Experiences page
-****/
+    .section-box {
+        width: 80%;
+    }
 
-nav ul {
-    flex-direction: column;
-    align-items: center;
-}
+    .banner h1 {
+        font-size: 2.5rem;
+    }
 
-nav ul li {
-    margin: 10px 0;
-}
+    .banner p {
+        font-size: 1rem;
+    }
 
-.banner h1 {
-    font-size: 2rem;
-}
+    /****
+    Style for Rides and Experiences page
+    ****/
 
-.banner p {
-    font-size: 1rem;
-}
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.section-box {
-    width: 90%;
-}
+    nav ul li {
+        margin: 10px 0;
+    }
 
-.section-box h2 {
-    font-size: 1.5rem;
-    text-decoration: none;
-}
+    .banner h1 {
+        font-size: 2rem;
+    }
 
-/*****
-Style for Contact Us page
-******/
+    .banner p {
+        font-size: 1rem;
+    }
 
+    .section-box {
+        width: 90%;
+    }
 
-.contact-form {
-    padding: 20px;
-}
+    .section-box h2 {
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
 
-.form-grid {
-    grid-template-columns: 1fr;
-}
-
-.banner h1 {
-    font-size: 2rem;
-}
-
-.banner p {
-    font-size: 1rem;
-}
-/*****
-Style for Ride page 
-*****/
-.ride-box  .dining-box, .shop-box  {
-    width: 100%;             /* Full width for small screens (1 box per row) */
-}
-}
+    /*****
+    Style for Contact Us page
+    ******/
 
 
+    .contact-form {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    /*****
+    Style for Ride page 
+    *****/
+    .ride-box .dining-box,
+    .shop-box {
+        width: 100%;
+        /* Full width for small screens (1 box per row) */
+    }
+
+    .learn-more {
+        max-width: 100%;
+    }
+
+    .ticket-box2 {
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+}
 
 
 
@@ -1032,28 +1164,55 @@ Style for park-hours&map page
     }
 
 
- /*****
-Style for Contact Us page
-******/
-nav ul {
-    flex-direction: column;
-    align-items: center;
-}
+    /*****
+    Style for Contact Us page
+    ******/
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-nav ul li {
-    margin: 10px 0;
-}
+    nav ul li {
+        margin: 10px 0;
+    }
 
-.banner h1 {
-    font-size: 1.5rem;
-}
+    .banner h1 {
+        font-size: 1.5rem;
+    }
 
-.form-container {
-    padding: 15px;
-}
+    .form-container {
+        padding: 15px;
+    }
 
-button {
-    font-size: 1rem;
-}
+    button {
+        font-size: 1rem;
+    }
+
+    .learn-more {
+        max-width: 100%;
+    }
+
+    .learn-more:hover {
+        background-color: #444;
+    }
+
+    .pass-box1 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .pass-box2 {
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .ticket-details {
+        width: 100%;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
 
 }
