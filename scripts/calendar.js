@@ -1,3 +1,5 @@
+
+//Event listener for updating the calendar
 document.addEventListener('DOMContentLoaded', function () {
     const monthName = document.getElementById('month-name');
     const calendarGrid = document.getElementById('calendar-grid');
@@ -16,8 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
         monthName.textContent = `${months[month]} ${year}`;
 
         // Calculate the number of days in the month and the start day
-        const daysInMonth = new Date(year, month + 1, 0).getDate(); // Get last day of the month
-        const startDay = new Date(year, month, 1).getDay(); // Get the first day of the month (0 = Sunday)
+
+        // Get last day of the month
+        const daysInMonth = new Date(year, month + 1, 0).getDate(); 
+
+        // Get the first day of the month (0 = Sunday)
+        const startDay = new Date(year, month, 1).getDay(); 
 
         // Clear the current calendar grid
         calendarGrid.innerHTML = '';
@@ -25,7 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Fill the empty spaces before the first day of the month
         for (let i = 0; i < startDay; i++) {
             const emptyCell = document.createElement('div');
-            calendarGrid.appendChild(emptyCell); // Empty spaces for previous month
+
+            // Empty spaces for previous month
+            calendarGrid.appendChild(emptyCell); 
         }
 
         // Generate the days of the month
@@ -46,12 +54,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const clockIcon = document.createElement('img');
             clockIcon.src = 'images/ClockIcon.jpg';
             clockIcon.alt = 'Clock Icon';
-            clockIcon.classList.add('clock-icon'); // Add class for styling
+
+            // Add class for styling
+            clockIcon.classList.add('clock-icon'); 
 
             // Create the hours text
             const hoursText = document.createElement('p');
-            hoursText.textContent = '10:00 AM - 8:00 PM'; // Operating hours
-            hoursText.classList.add('hours-text'); // Add class for styling
+
+            // Operating hours
+            hoursText.textContent = '10:00 AM - 8:00 PM'; 
+            // Add class for styling
+            hoursText.classList.add('hours-text'); 
 
             // Append clock icon and hours text into the time container
             timeContainer.appendChild(clockIcon);
@@ -68,12 +81,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Event listeners for navigating to the previous and next months
     prevMonthButton.addEventListener('click', function () {
-        currentDate.setMonth(currentDate.getMonth() - 1); // Go to previous month
+        // Go to previous month
+        currentDate.setMonth(currentDate.getMonth() - 1); 
         updateCalendar(currentDate.getMonth(), currentDate.getFullYear());
     });
 
     nextMonthButton.addEventListener('click', function () {
-        currentDate.setMonth(currentDate.getMonth() + 1); // Go to next month
+        // Go to next month
+        currentDate.setMonth(currentDate.getMonth() + 1); 
         updateCalendar(currentDate.getMonth(), currentDate.getFullYear());
     });
 
